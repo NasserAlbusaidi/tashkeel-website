@@ -1,0 +1,18 @@
+var docSelected = app.activeDocument.selection;
+if ( docSelected.length > 0 ) {
+    //select all objects with the same name as the first selected object
+    var firstSelected = docSelected[0];
+    var firstSelectedName = firstSelected.name;
+    var allObjects = app.activeDocument.allPageItems;
+    for ( i = 0; i < allObjects.length; i++ ) {
+        if ( allObjects[i].name == firstSelectedName ) {
+            allObjects[i].selected = true;
+            //delete all objects with the same name as the first selected object
+            app.activeDocument.selection[0].remove();
+        }
+
+    }
+   
+    
+
+}

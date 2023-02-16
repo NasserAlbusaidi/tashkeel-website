@@ -1,91 +1,109 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
+"use client";
+import Image from "next/image";
+import { Inter } from "@next/font/google";
+import styles from "./page.module.css";
+import { useState } from "react";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [count, setCount] = useState(0);
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
+    <>
+      <div className="grid grid-cols-12 grid-rows-4 gap-y-0 ">
+        <div className=" col-span-12 bg-[#ebe8df] h-[459px]">
+          <div className="col-span-3 col-start-6  text-center  py-[40px] h-[180px]">
+            <img
+              src="/images/path.svg"
+              alt="Tashkeel"
+              className="w-[157px] sm:w-[200px]  mx-auto"
             />
-          </a>
+            <p className="text-[#615b51] text-[8px] sm:text-[18px]  mt-[20px] sm:mt-[30px]">
+              خدمة لتشكيل النصوص والكلمات العربية
+            </p>
+          </div>
+          <div className="col-span-4 col-start-7 text-center ml-[45%]">
+            <button className="bg-white text-brown px-[25px] py-[8px] h-[35px] rounded-md">
+              تشكيل نص
+            </button>
+            <button className="bg-white text-[#615b51] px-[25px] py-[8px] h-[35px] mr-[14px] rounded-md  ">
+              رفع ملف
+            </button>
+          </div>
+          <div className="text-center mr-auto relative">
+            <textarea
+              className="border-2 outline-none text-right rounded-lg border-[#e0dcce] px-6 py-4 pl-12 mt-10 w-full min-h-[250px] sm:py-10 sm:min-h-[400px] resize-none sm:w-[1120px] sm:px-10 sm:text-[22px] text-[18px]"
+              placeholder="أدخل النص"
+              maxLength={240}
+              onChange={(e) => {
+                setCount(e.target.value.length);
+              }}
+              contentEditable="true"
+            ></textarea>
+
+            <span className="absolute bottom-2 left-[22%]">
+              240/<span className="font-ibmplexb">{count}</span>
+            </span>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center mt-[20px] sm:mt-[30px]">
+            <button
+              className="  bg-[#8a8480] text-white px-[85px] py-[10px] rounded-md mr-[10px]  "
+              onClick={() => {
+                setCount(0);
+              }}
+            >
+              تشكيل
+            </button>
+          </div>
+        </div>
+        <div className="col-span-8 col-start-3 col-end-10 row-start-3 ">
+          <h3 className="text-bold text-[8px] sm:text-[24px]">
+            عن خدمة التشكيل
+          </h3>
+          <p className="text-[#615b51] pt-4 text-[8px] sm:text-[18px]">
+            تُستخدم اللغة العربية كلغة رسمية في أكثر من 20 بلداً في أنحاء
+            العالم، فاللغة العربية لغة واسعة الانتشار، والكثير من الأشخاص في
+            جميع أنحاء العالم يسعون لتعلّم اللغة العربية غير مبالين لصعوبة
+            تعلمها، ولكن لأنهم يدركون أهمية هذه اللغة. تُستخدم اللغة العربية
+            كلغة رسمية في أكثر من 20 بلداً في أنحاء العالم، فاللغة العربية لغة
+            واسعة الانتشار، والكثير من الأشخاص في جميع أنحاء العالم يسعون لتعلّم
+            اللغة العربية غير مبالين لصعوبة تعلمها، ولكن لأنهم يدركون أهمية هذه
+            اللغة.
+          </p>
+        </div>
+
+        <div className="col-span-2 col-start-6 row-start-4 ">
+          <h3 className="text-bold  text-[8px] sm:text-[24px] flex justify-center pb-20">
+            عن خدمة التشكيل
+          </h3>
+          <div className="col-span-2 col-start-6 row-start-5 ">
+            <div className="max-w-sm rounded overflow-hidden shadow-lg">
+              <img
+                className="w-full"
+                src="/images/1.jpg"
+                alt="Sunset in the mountains"
+              />
+              <div className="px-6 py-4">
+                <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
+                <p className="text-gray-700 text-base">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Voluptatibus quia, nulla! Maiores et perferendis eaque,
+                  exercitationem praesentium nihil.
+                </p>
+              </div>
+              <div className="px-6 pt-4 pb-2">
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #photography
+                </span>
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #travel
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </>
+  );
 }
