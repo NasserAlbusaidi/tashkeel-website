@@ -15,10 +15,10 @@ export default async function handle(
   request.requestBody({
     intent: 'CAPTURE',
     purchase_units: [
-      {
+      { 
         amount: {
           currency_code: 'USD',
-          value: '10.00',
+          value: '12.00',
         },
       },
     ],
