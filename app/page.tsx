@@ -58,7 +58,7 @@ export default function Home() {
           </div>
         </div>
         <div className="col-span-8 col-start-3 col-end-10 row-start-3 ">
-          <h3 className="text-bold text-[8px] sm:text-[24px]">
+          <h3 className="text-bold text-[8px] sm:text-[40px]">
             عن خدمة التشكيل
           </h3>
           <p className="text-[#615b51] pt-4 text-[8px] sm:text-[18px]">
@@ -73,33 +73,52 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="col-span-2 col-start-6 row-start-4 ">
-          <h3 className="text-bold  text-[8px] sm:text-[24px] flex justify-center pb-20">
-            عن خدمة التشكيل
-          </h3>
-          <div className="col-span-2 col-start-6 row-start-5 ">
-            <div className="max-w-sm rounded overflow-hidden shadow-lg">
+        <div className="col-span-8 col-start-3 row-start-4 ">
+          <h3 className=" text-[8px] sm:text-[45px] flex justify-center pb-20">
+          مميزات تشكيل
+                    </h3>
+          <div className=" flex flex-row justify-center gap-36 ">
+            <div className="max-w-sm rounded overflow-hidden text-center ">
               <img
-                className="w-full"
-                src="/images/1.jpg"
+                className="w-full border"
+                src= "https://tailwindcss.com/img/card-top.jpg"
                 alt="Sunset in the mountains"
               />
-              <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
-                <p className="text-gray-700 text-base">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                  exercitationem praesentium nihil.
+              <div className=" py-8">
+                <div className="font-bold text-xl ">تشكيل بدقة 98 بالمئة</div>
+                <p className="text-gray-700 text-[20px] py-4">
+                تعلم اللغة العربية من الخبراء في اللغة الناطقين بالعربية، وانغمس في ثقافتها، وتعرف على قيمها وحضارتها.
                 </p>
               </div>
-              <div className="px-6 pt-4 pb-2">
-                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                  #photography
-                </span>
-                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                  #travel
-                </span>
+              
+            </div>
+            <div className="max-w-sm rounded overflow-hidden text-center ">
+              <img
+                className="w-full border"
+                src= "https://tailwindcss.com/img/card-top.jpg"
+                alt="Sunset in the mountains"
+              />
+              <div className=" py-8">
+                <div className="font-bold text-xl">تشكيل بدقة 98 بالمئة</div>
+                <p className="text-gray-700 text-[20px] py-4">
+                تعلم اللغة العربية من الخبراء في اللغة الناطقين بالعربية، وانغمس في ثقافتها، وتعرف على قيمها وحضارتها.
+                </p>
               </div>
+              
+            </div>
+            <div className="max-w-sm rounded overflow-hidden text-center ">
+              <img
+                className="w-full border"
+                src= "https://tailwindcss.com/img/card-top.jpg"
+                alt="Sunset in the mountains"
+              />
+              <div className=" py-8 items-center ">
+                <div className="font-bold text-xl ">تشكيل بدقة 98 بالمئة</div>
+                <p className="text-gray-700 text-[20px] py-4">
+                تعلم اللغة العربية من الخبراء في اللغة الناطقين بالعربية، وانغمس في ثقافتها، وتعرف على قيمها وحضارتها.
+                </p>
+              </div>
+              
             </div>
           </div>
         </div>
