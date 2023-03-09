@@ -134,7 +134,7 @@ export default function Home() {
       </div>
       <div className="container mx-auto pt-[114px]">
         <div className="grid grid-cols-12">
-          <div className="col-span-8 col-start-3  ">
+          <div className="col-span-8 col-start-3 pb-[136px]  ">
             <h3 className=" text-[8px] sm:text-[45px] flex justify-center pb-20">
               خطة الإشتراك
             </h3>
@@ -200,7 +200,7 @@ export default function Home() {
                     <li className="flex items-center">- تشكيل غير محدود</li>
                     <li className="flex items-center">- أرشيف النصوص المشكولة</li>
                     </ul>  
-                  </div>                  
+                  </div>                     
                   </div>
                   <button className="bg-brown hover:bg-blue-70 h-[50px] w-[140px] text-white font-bold my-[28px]   rounded">
                       اشترك 
